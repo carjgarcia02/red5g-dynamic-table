@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const SubmitBtn = ({ val, cursor }) => {
   return (
     <button
-      className="w-[174px] h-[48px] flex items-center bg-[#DD3542] font-bold text-white text-base rounded-3xl px-6 py-[14px] mx-auto mb-6"
+      className="w-[174px] h-[48px] flex items-center bg-[#DD3542] font-bold text-white text-base rounded-3xl px-6 py-[14px] mx-auto mb-6 select-none"
       style={{ cursor: `${cursor}` }}
       type="submit"
     >

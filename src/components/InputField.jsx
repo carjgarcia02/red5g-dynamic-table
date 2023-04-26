@@ -1,26 +1,21 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
 
-const InputField = ({ type, val, placeholder }) => {
-  const [inputValue, setInputValue] = useState("");
-  const [clicked, setClicked] = useState(false);
-
-  const handleClick = () => {
-    console.log("Clickaste un campo!");
-  };
-
-  const handleChange = () => {
-    console.log(val);
-  };
-
+const InputField = ({
+  type,
+  placeholder,
+  inputValue,
+  handleClick,
+  clicked,
+}) => {
   return (
     <input
       className="relative w-[368px] h-[56px] text-base text-[#413E4D] text-left border border-solid border-[#ABB9C780] rounded-md cursor-pointer placeholder:px-4 placeholder:py-[18px] focus:outline-none"
+      style={clicked ? { padding: "28px 16px 8px", cursor: "default" } : null}
       type={type}
       placeholder={placeholder}
-      value={clicked && inputValue.user}
+      value={clicked ? inputValue : ""}
       onClick={handleClick}
-      onChange={handleChange}
+      readOnly
     />
     /*  placeholder:absolute placeholder:top-2 placeholder:left-4 placeholder:text-[#ABB9C7] placeholder:text-xs placeholder:text-left px-4 pt-7 py-2*/
     /* New values for placeholder and normal text after writing inside input. Animation pending. */
@@ -30,7 +25,10 @@ const InputField = ({ type, val, placeholder }) => {
 InputField.propTypes = {
   type: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  val: PropTypes.string,
+  reference: PropTypes.object,
+  inputValue: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
+  clicked: PropTypes.bool.isRequired,
 };
 
 export default InputField;
