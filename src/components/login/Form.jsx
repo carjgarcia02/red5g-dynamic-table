@@ -2,7 +2,7 @@
 import SubmitBtn from "./SubmitBtn";
 import InputField from "./InputField";
 /* Custom Hook */
-import useForm from "../hooks/useForm";
+import useForm from "../../hooks/useForm";
 
 const Form = () => {
   const { inputValues, handleClick, clicked, handleSubmit } = useForm();

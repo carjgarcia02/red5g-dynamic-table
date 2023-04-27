@@ -1,5 +1,5 @@
-import Login from "./components/Login";
-import Table from "./components/Table";
+import LoginPage from "./pages/LoginPage";
+import TablePage from "./pages/TablePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -7,8 +7,8 @@ function App() {
     <Router>
       <div className="flex justify-center items-center h-screen bg-[#fafafa]">
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/table" element={<Table />} />
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/table" element={<TablePage />} />
         </Routes>
       </div>
     </Router>

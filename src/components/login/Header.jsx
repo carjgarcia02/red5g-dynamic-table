@@ -1,4 +1,4 @@
-import SufiLogo from "../assets/Grupo-258.svg";
+import SufiLogo from "../../assets/Grupo-258.svg";
 
 const Header = () => {
   return (

@@ -1,6 +1,6 @@
 /* Components */
-import Header from "./Header";
-import Form from "./Form";
+import Header from "../components/login/Header";
+import Form from "../components/login/Form";
 /* SVG images used for background */
 import Grupo32966 from "../assets/Grupo-32966.svg";
 import Grupo32967 from "../assets/Grupo-32967.svg";
@@ -9,7 +9,7 @@ import Elipse216 from "../assets/Elipse-216.svg";
 import Grupo36052 from "../assets/Grupo-36052.svg";
 import Grupo36075 from "../assets/Grupo-36075.svg";
 
-const Login = () => {
+const LoginPage = () => {
   return (
     <main className="relative w-[1280px] h-[804px] bg-[#ffffff] flex items-center font-openSans overflow-hidden">
       {/* Background images */}
@@ -52,4 +52,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

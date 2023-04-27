@@ -17,8 +17,6 @@ const InputField = ({
       onClick={handleClick}
       readOnly
     />
-    /*  placeholder:absolute placeholder:top-2 placeholder:left-4 placeholder:text-[#ABB9C7] placeholder:text-xs placeholder:text-left px-4 pt-7 py-2*/
-    /* New values for placeholder and normal text after writing inside input. Animation pending. */
   );
 };
 
