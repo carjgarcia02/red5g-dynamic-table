@@ -2,20 +2,20 @@ const TableHeading = () => {
   return (
     <thead className="h-12 py-4 text-[#413e4d] bg-[#f1f6fb] font-bold">
       <tr>
-        <th>
-          <p className="w-[276px] h-4 ml-[72px] text-start">Fecha y Hora</p>
+        <th className="w-[276px] h-4 pl-[72px] text-start">
+          <p>Category</p>
         </th>
-        <th className="w-60 h-4 text-start">
-          <p>Número de desembolso</p>
+        <th>
+          <p className="w-60 h-4 text-start">Brand</p>
         </th>
         <th className="w-[236px] h-4 text-start">
-          <p>Tipo de documento</p>
+          <p>Price</p>
         </th>
         <th className="w-64 h-4 text-start">
-          <p>Número de documento</p>
+          <p>Rating</p>
         </th>
         <th className="w-44 h-4 font-bold text-start">
-          <p>Monto</p>
+          <p>Stock</p>
         </th>
       </tr>
     </thead>

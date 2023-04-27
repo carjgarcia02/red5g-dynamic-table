@@ -1,49 +1,33 @@
+import PropTypes from "prop-types";
+import Filters from "./Filters";
 import TableHeading from "./TableHeading";
 import TableRow from "./TableRow";
 
-const DataTable = () => {
+const DataTable = ({ records }) => {
   return (
     <>
-      <section className="w-full h-[88px] px-[72px] py-4 flex justify-between items-center bg-[#fafafa]">
-        <input
-          className="w-44 h-14 border border-[#ABB9C780] rounded-md"
-          type="select"
-        />
-        <input
-          className="w-[272px] h-14 border border-[#ABB9C780] rounded-md"
-          type="text"
-        />
-        <input
-          className="w-[272px] h-14 border border-[#ABB9C780] rounded-md"
-          type="text"
-        />
-        <div className="relative w-44 h-14">
-          <input
-            className="w-full h-full border border-[#ABB9C780] rounded-md"
-            type="text"
-          />
-        </div>
-        <div className="relative w-44 h-14">
-          <input
-            className="w-full h-full border border-[#ABB9C780] rounded-md"
-            type="text"
-          />
-        </div>
-      </section>
+      <Filters />
       <table className="w-full text-sm">
         <TableHeading />
         <tbody>
-          <TableRow />
-          <TableRow />
-          <TableRow />
-          <TableRow />
-          <TableRow />
-          <TableRow />
-          <TableRow />
+          {records.map(({ id, brand, category, price, rating, stock }) => (
+            <TableRow
+              key={id}
+              brand={brand}
+              category={category}
+              price={price}
+              rating={rating}
+              stock={stock}
+            />
+          ))}
         </tbody>
       </table>
     </>
   );
+};
+
+DataTable.propTypes = {
+  records: PropTypes.array.isRequired,
 };
 
 export default DataTable;

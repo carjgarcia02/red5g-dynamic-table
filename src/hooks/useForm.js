@@ -26,10 +26,11 @@ const useForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValues.user.length > 0 && inputValues.pass.length > 0) {
-      console.log("Éxito");
       navigate("/table");
     } else {
-      console.log("Hay campos vacíos");
+      console.warn(
+        "You must click any text field and then press then 'INGRESAR' button."
+      );
     }
   };
 
